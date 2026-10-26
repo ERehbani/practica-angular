@@ -1,0 +1,8 @@
+<article class="card">
+  <h3>{{ clase().nombre }}</h3>
+  <span class="horario">{{ clase().dia }} · {{ clase().horario }}</span>
+  <span class="meta">
+    Prof. {{ clase().instructor }} · {{ clase().duracion }} min · {{ clase().nivel }}
+  </span>
+  <button type="button" (click)="detalle.emit(clase().id)">Ver detalle</button>
+</article>

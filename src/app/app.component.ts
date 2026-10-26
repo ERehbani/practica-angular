@@ -1,12 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Navbar } from './shared/navbar/navbar.component';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Navbar],
   selector: 'app-root',
   styleUrl: './app.component.css',
   templateUrl: './app.component.html',
 })
-export class App {
-  protected readonly title = signal('parcial-gym-2');
-}
+export class App {}

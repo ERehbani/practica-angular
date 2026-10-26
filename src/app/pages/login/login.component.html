@@ -1,0 +1,26 @@
+<h1>Ingresar</h1>
+
+<form class="formulario" [formGroup]="form" (ngSubmit)="ingresar()">
+  <label for="email">
+    Email
+    <input formControlName="email" id="email" type="email" />
+  </label>
+
+  @if (form.get('email')?.invalid && form.get('email')?.touched) {
+    <small class="error">Ingresá un email válido.</small>
+  }
+
+  <label for="password">
+    Contraseña
+    <input formControlName="password" id="password" type="password" />
+  </label>
+
+  @if (form.get('password')?.invalid && form.get('password')?.touched) {
+    <small class="error">Ingresá una contraseña.</small>
+  }
+
+  <button type="submit" [disabled]="form.invalid">Ingresar</button>
+</form>
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}

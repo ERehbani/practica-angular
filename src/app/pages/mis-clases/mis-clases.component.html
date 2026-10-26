@@ -1,0 +1,26 @@
+<h1>Mis clases</h1>
+<!-- COMPLETAR -->
+
+<table>
+  <tr>
+    <th>Clase</th>
+    <th>Día</th>
+    <th>Horario</th>
+    <th>Instructor</th>
+    <th></th>
+  </tr>
+
+  @for (l of lista(); track l.id) {
+    <tr>
+      <td>
+        <a [routerLink]="['/clase', l.id]">{{ l.nombre }}</a>
+      </td>
+      <td>{{ l.dia }}</td>
+      <td>{{ l.horario }}</td>
+      <td>{{ l.instructor }}</td>
+      <td><button class="secundario" (click)="cancelar(l.inscripcionId)">Cancelar</button></td>
+    </tr>
+  } @empty {
+    <p class="meta">Todavía no estás anotado en ninguna clase. <a routerLink="/">Ver grilla</a></p>
+  }
+</table>

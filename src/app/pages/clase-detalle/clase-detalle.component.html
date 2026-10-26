@@ -1,0 +1,33 @@
+@if (clase(); as c) {
+  <h1>{{ c.nombre }}</h1>
+  <p class="horario">{{ c.dia }} · {{ c.horario }}</p>
+  <p class="meta">Prof. {{ c.instructor }} · {{ c.duracion }} min · Nivel {{ c.nivel }}</p>
+  <p>{{ c.descripcion }}</p>
+
+  @if (yaInscripto()) {
+    <p class="ok">✔ Ya estás anotado en esta clase.</p>
+    <a routerLink="/my-classes">Ver mis clases</a>
+  }
+
+  @if (auth.esUser() && !yaInscripto()) {
+    <button (click)="anotarme()" [disabled]="enviando()">Anotarme</button>
+  }
+
+  @if (error()) {
+    <p class="error">{{ error() }}</p>
+  }
+
+  @if (auth.esAdmin()) {
+    <p class="meta">Los administradores no se anotan a clases.</p>
+  }
+
+  @if (!auth.logueado()) {
+    <p>Iniciá sesión para anotarte. <a routerLink="/login">Ingresar</a></p>
+  }
+
+  <p><a routerLink="/">← Volver a la grilla</a></p>
+} @else if (enviando()) {
+  <p class="meta">Cargando...</p>
+} @else {
+  <p class="error">{{ error() }}</p>
+}

@@ -1,0 +1,19 @@
+<h1>Grilla de clases</h1>
+
+<div class="filtros">
+  <input class="buscador" [formControl]="busqueda" placeholder="Buscar por nombre..." />
+  <select [formControl]="diaFiltro">
+    <option value="">Todos los días</option>
+    @for (d of dias; track d) {
+      <option [value]="d">{{ d }}</option>
+    }
+  </select>
+</div>
+
+<section class="grilla">
+  @for (c of filtradas(); track c.id) {
+    <app-clase-card [clase]="c" (detalle)="irADetalle($event)" />
+  } @empty {
+    <p class="meta">No hay clases que coincidan con los filtros.</p>
+  }
+</section>

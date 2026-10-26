@@ -1,0 +1,165 @@
+{
+  "clases": [
+    {
+      "id": 1,
+      "nombre": "Spinning",
+      "instructor": "Martín Ríos",
+      "duracion": 45,
+      "nivel": "Intermedio",
+      "descripcion": "Clase de ciclismo indoor con música y cambios de ritmo.",
+      "dia": "Lunes",
+      "horario": "18:00"
+    },
+    {
+      "id": 2,
+      "nombre": "Yoga",
+      "instructor": "Carla Méndez",
+      "duracion": 60,
+      "nivel": "Principiante",
+      "descripcion": "Posturas, respiración y relajación para empezar el día.",
+      "dia": "Lunes",
+      "horario": "08:00"
+    },
+    {
+      "id": 3,
+      "nombre": "Pilates",
+      "instructor": "Sofía Luna",
+      "duracion": 50,
+      "nivel": "Principiante",
+      "descripcion": "Trabajo de core, postura y flexibilidad con reformer.",
+      "dia": "Viernes",
+      "horario": "10:00"
+    },
+    {
+      "id": 4,
+      "nombre": "Funcional",
+      "instructor": "Diego Paz",
+      "duracion": 50,
+      "nivel": "Avanzado",
+      "descripcion": "Circuitos de fuerza y resistencia con el peso del cuerpo.",
+      "dia": "Martes",
+      "horario": "19:00"
+    },
+    {
+      "id": 5,
+      "nombre": "Boxeo",
+      "instructor": "Laura Sosa",
+      "duracion": 60,
+      "nivel": "Intermedio",
+      "descripcion": "Técnica, guantes y bolsa. No hace falta experiencia previa.",
+      "dia": "Martes",
+      "horario": "20:00"
+    },
+    {
+      "id": 6,
+      "nombre": "Spinning",
+      "instructor": "Martín Ríos",
+      "duracion": 45,
+      "nivel": "Intermedio",
+      "descripcion": "Clase de ciclismo indoor con música y cambios de ritmo.",
+      "dia": "Miércoles",
+      "horario": "18:00"
+    },
+    {
+      "id": 7,
+      "nombre": "Zumba",
+      "instructor": "Valeria Ruiz",
+      "duracion": 45,
+      "nivel": "Principiante",
+      "descripcion": "Baile y cardio con ritmos latinos.",
+      "dia": "Sábado",
+      "horario": "11:00"
+    },
+    {
+      "id": 8,
+      "nombre": "Yoga",
+      "instructor": "Carla Méndez",
+      "duracion": 60,
+      "nivel": "Principiante",
+      "descripcion": "Posturas, respiración y relajación para empezar el día.",
+      "dia": "Jueves",
+      "horario": "08:00"
+    },
+    {
+      "id": 9,
+      "nombre": "Funcional",
+      "instructor": "Diego Paz",
+      "duracion": 50,
+      "nivel": "Avanzado",
+      "descripcion": "Circuitos de fuerza y resistencia con el peso del cuerpo.",
+      "dia": "Jueves",
+      "horario": "19:00"
+    },
+    {
+      "id": 10,
+      "nombre": "Boxeo",
+      "instructor": "Laura Sosa",
+      "duracion": 60,
+      "nivel": "Intermedio",
+      "descripcion": "Técnica, guantes y bolsa. No hace falta experiencia previa.",
+      "dia": "Viernes",
+      "horario": "20:00"
+    },
+    {
+      "id": 11,
+      "nombre": "Pilates",
+      "instructor": "Sofía Luna",
+      "duracion": 50,
+      "nivel": "Principiante",
+      "descripcion": "Trabajo de core, postura y flexibilidad con reformer.",
+      "dia": "Miércoles",
+      "horario": "10:00"
+    },
+    {
+      "id": 12,
+      "nombre": "Funcional",
+      "instructor": "Diego Paz",
+      "duracion": 50,
+      "nivel": "Avanzado",
+      "descripcion": "Circuitos de fuerza y resistencia con el peso del cuerpo.",
+      "dia": "Sábado",
+      "horario": "09:00"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Administrador",
+      "email": "admin@gym.com",
+      "password": "admin123",
+      "rol": "admin"
+    },
+    {
+      "id": 2,
+      "nombre": "Juan Pérez",
+      "email": "juan@mail.com",
+      "password": "1234",
+      "rol": "user"
+    },
+    { "id": 3, "nombre": "Ana Gómez", "email": "ana@mail.com", "password": "1234", "rol": "user" },
+    {
+      "id": 4,
+      "nombre": "Pedro Díaz",
+      "email": "pedro@mail.com",
+      "password": "1234",
+      "rol": "user"
+    },
+    {
+      "id": 5,
+      "nombre": "Lucía Torres",
+      "email": "lucia@mail.com",
+      "password": "1234",
+      "rol": "user"
+    }
+  ],
+  "inscripciones": [
+    { "id": 1, "usuarioId": 2, "claseId": 1 },
+    { "id": 2, "usuarioId": 3, "claseId": 1 },
+    { "id": 3, "usuarioId": 2, "claseId": 8 },
+    { "id": 4, "usuarioId": 4, "claseId": 5 },
+    { "id": 5, "usuarioId": 3, "claseId": 7 },
+    { "id": 6, "usuarioId": 5, "claseId": 3 },
+    { "id": 7, "usuarioId": 4, "claseId": 1 },
+    { "id": 8, "usuarioId": 5, "claseId": 10 }
+  ]
+}

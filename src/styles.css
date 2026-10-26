@@ -1,1 +1,174 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #0f1115;
+  --panel: #1a1d24;
+  --borde: #2a2f3a;
+  --texto: #e8e8ea;
+  --suave: #9aa0ab;
+  --acento: #16a34a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--texto);
+}
+
+a {
+  color: #4ade80;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.navbar {
+  /* completar */
+  /* completar */
+  gap: 1.5rem;
+  padding: .8rem 1.5rem;
+  background: var(--panel);
+  border-bottom: 1px solid var(--borde);
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+.navbar nav a,
+.sesion a {
+  color: var(--suave);
+  text-decoration: none;
+}
+
+.navbar a.activo {
+  color: var(--texto);
+  border-bottom: 2px solid var(--acento);
+}
+
+.sesion {
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+}
+
+.filtros {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.buscador {
+  flex: 1;
+  max-width: 380px;
+}
+
+.grilla {
+  /* completar */
+  /* completar */
+  gap: 1rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.horario {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.meta {
+  color: var(--suave);
+  font-size: .9rem;
+}
+
+button {
+  background: var(--acento);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+button.secundario {
+  background: transparent;
+  border: 1px solid var(--borde);
+  color: var(--texto);
+}
+
+input,
+select {
+  background: #0b0d11;
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: .5rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  max-width: 380px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: .5rem 0 1rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: .5rem;
+  border-bottom: 1px solid var(--borde);
+}
+
+.error {
+  color: #f87171;
+}
+
+.ok {
+  color: #4ade80;
+  font-weight: 600;
+}

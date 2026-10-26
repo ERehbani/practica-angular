@@ -1,0 +1,23 @@
+<h1>Usuarios registrados</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Rol</th>
+  </tr>
+
+  <tr>
+    <td>nombre</td>
+    <td>email</td>
+    <td>rol</td>
+  </tr>
+  @for (u of usuarios(); track $index) {
+    <tr>
+      <td>{{ u.nombre }}</td>
+      <td>{{ u.email }}</td>
+      <td>{{ u.rol }}</td>
+    </tr>
+  }
+</table>
+<p class="meta">Total: {{ usuarios().length }}</p>

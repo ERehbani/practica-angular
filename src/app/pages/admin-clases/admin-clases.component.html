@@ -1,0 +1,24 @@
+<h1>Administrar clases</h1>
+
+<!-- COMPLETAR -->
+<table>
+  <tr>
+    <th>Clase</th>
+    <th>Día</th>
+    <th>Horario</th>
+    <th>Instructor</th>
+    <th>Inscriptos</th>
+    <th></th>
+  </tr>
+
+  @for (r of resumen(); track $index) {
+    <tr>
+      <td>{{ r.clase.nombre }}</td>
+      <td>{{ r.clase.dia }}</td>
+      <td>{{ r.clase.horario }}</td>
+      <td>{{ r.clase.instructor }}</td>
+      <td>{{ r.inscriptos }}</td>
+      <td><a [routerLink]="['/admin/classes', r.clase.id]">Ver detalle</a></td>
+    </tr>
+  }
+</table>

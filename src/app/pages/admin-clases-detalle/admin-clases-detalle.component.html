@@ -1,0 +1,35 @@
+<p><a routerLink="/admin/clases">← Volver a clases</a></p>
+<!-- COMPLETAR -->
+@if (!cargando()) {
+  <h1>{{ clase()?.nombre }}</h1>
+  <p class="horario">{{ clase()?.dia }} · {{ clase()?.horario }}</p>
+  <p class="meta">
+    Prof. {{ clase()?.instructor }} · {{ clase()?.duracion }} min · Nivel {{ clase()?.nivel }}
+  </p>
+  <p>{{ clase()?.descripcion }}</p>
+
+  <h2>Inscriptos ({{ inscripciones().length }})</h2>
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+
+    @for (i of inscriptos(); track i.inscripcionId) {
+      <tr>
+        <td>{{ i.nombre }}</td>
+        <td>{{ i.email }}</td>
+        <td>
+          <button class="secundario" (click)="quitar(i.inscripcionId, i.nombre)">Quitar</button>
+        </td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="3" class="meta">Sin inscriptos</td>
+      </tr>
+    }
+  </table>
+} @else {
+  <p class="meta">Cargando...</p>
+}
